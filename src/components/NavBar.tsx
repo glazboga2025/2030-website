@@ -18,7 +18,7 @@ export function NavBar() {
       <nav className="container mx-auto flex items-center justify-between">
         <div className="logo">
           <Link href="/" className="text-xl font-medium">
-            Мой Логотип
+            Бустлинкс
           </Link>
         </div>
         <ul className="hidden md:flex items-center gap-8">

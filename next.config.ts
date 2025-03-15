@@ -2,8 +2,6 @@ import type { NextConfig } from "next";
 
 const config: NextConfig = {
   reactStrictMode: true,
-  output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/2030-website' : '',
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -13,6 +11,20 @@ const config: NextConfig = {
         pathname: "**",
       },
     ],
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'blog.(?<domain>.*)',
+          },
+        ],
+        destination: '/blog/:path*',
+      },
+    ];
   },
 };
 

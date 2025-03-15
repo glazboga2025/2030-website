@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Фастлинкер SEO Оптимизатор",
+  title: "Бустлинкс SEO Оптимизатор",
   description: "Крутой сайт про ссылки.",
 };
 

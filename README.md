@@ -20,6 +20,31 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Поддомены
+
+Проект настроен для работы с поддоменами. Блог доступен на поддомене `blog`.
+
+### Локальная разработка с поддоменами
+
+Для локальной разработки с поддоменами используйте:
+
+```bash
+npm run dev:subdomains
+```
+
+Затем откройте [http://blog.localhost:3000](http://blog.localhost:3000) в браузере.
+
+Обратите внимание, что при использовании поддомена `blog` вам не нужно добавлять `/blog` в URL. Например:
+- Используйте `blog.yourdomain.com` вместо `yourdomain.com/blog`
+- Используйте `blog.yourdomain.com/page/2` вместо `yourdomain.com/blog/page/2`
+
+### Настройка DNS для продакшена
+
+Для работы поддоменов в продакшене необходимо настроить DNS-записи:
+
+1. Создайте A-запись для основного домена, указывающую на IP-адрес вашего сервера
+2. Создайте CNAME-запись для поддомена `blog`, указывающую на основной домен
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
